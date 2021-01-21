@@ -22,11 +22,11 @@ func (v *Int64Rule) Validate() (bool, error) {
 	}
 
 	if value < v.Min {
-		return false, errors.New(v.Name + " Minimum is " + strconv.FormatInt(v.Min, 16))
+		return false, errors.New(v.Name + " Minimum is " + strconv.FormatInt(v.Min, 10))
 	}
 
 	if value > v.Max {
-		return false, errors.New(v.Name + " Maximum is " + strconv.FormatInt(v.Max, 16))
+		return false, errors.New(v.Name + " Maximum is " + strconv.FormatInt(v.Max, 10))
 	}
 
 	return true, nil
